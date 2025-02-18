@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/MainWindow"/>
+    <qresource prefix="/images">
+        <file>images/帮助.png</file>
+        <file>images/查询.png</file>
+        <file>images/添加.png</file>
+        <file>images/统计.png</file>
+    </qresource>
+</RCC>
