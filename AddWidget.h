@@ -3,7 +3,7 @@
 #include <QWidget>
 #include "ui_AddWidget.h"
 #include "SQLConnect.cpp"
-
+#include <QMessageBox>
 
 class AddWidget : public QWidget
 {

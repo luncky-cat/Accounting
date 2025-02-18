@@ -7,6 +7,7 @@
 #include <cppconn/prepared_statement.h>
 #include <cppconn/resultset.h>
 #include <cppconn/exception.h>
+using namespace std;
 
 class MySQLConnection {
 public:
@@ -30,6 +31,20 @@ public:
             return nullptr;
         }
     }
+
+    // 执行删除并返回结果
+    sql::ResultSet* DeleteById(const std::string& querys) {
+        string query = "DELETE FROM OverheadItems WHERE itemID=" + querys;
+        try {
+            sql::Statement* stmt = con->createStatement();
+            return stmt->executeQuery(query);
+        }
+        catch (sql::SQLException& e) {
+            std::cerr << "Query Error: " << e.what() << std::endl;
+            return nullptr;
+        }
+    }
+
 
 private:
     // 私有构造函数，确保只能通过 getInstance() 创建实例

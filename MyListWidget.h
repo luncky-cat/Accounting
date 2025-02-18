@@ -24,14 +24,8 @@ class CustomListWidget : public QWidget {    //列表整体
     Q_OBJECT
 public:
     CustomListWidget(QWidget* parent = nullptr);
-//signals:
-//    void buttonClicked(const QString& text);
-//
-//private slots:
-//    void onButtonClicked() {
-//        // 在此处理按钮点击事件
-//        qDebug() << "Button clicked!";
-//    }
+private slots:
+    void deleteItem();
 };
 
  
