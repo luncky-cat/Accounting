@@ -64,10 +64,8 @@ CustomListWidget::CustomListWidget(QWidget* parent):QWidget(parent)
                 QString::fromStdString(usage),
                 this
             );
-            // 创建 QListWidgetItem，并将 ListItemWidget 添加到其中
             QListWidgetItem* item = new QListWidgetItem(listWidget);
-            item->setSizeHint(itemWidget->sizeHint());  // 设置项的大小
-            // 将 ListItemWidget 插入到 QListWidget 中
+            item->setSizeHint(itemWidget->sizeHint());
             listWidget->setItemWidget(item, itemWidget);
         }
     }
