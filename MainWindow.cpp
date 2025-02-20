@@ -3,13 +3,15 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
+   
     ui.setupUi(this);
-    StackedWidget = new QStackedWidget();
-    selectWidget = new SelectWidget;
-    addWidget = new AddWidget;
+    StackedWidget = new QStackedWidget(ui.centralWidget);
+    selectWidget = new SelectWidget(StackedWidget);
+    addWidget = new AddWidget(StackedWidget);
     StackedWidget->addWidget(selectWidget);
     StackedWidget->addWidget(addWidget);
-    StackedWidget->setCurrentIndex(1);
+    StackedWidget->setCurrentIndex(0);
+  
 }
 
 MainWindow::~MainWindow()
