@@ -52,7 +52,17 @@
        </item>
        <item>
         <property name="text">
+         <string>服装</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
          <string>教育</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>住宿</string>
         </property>
        </item>
       </widget>
